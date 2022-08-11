@@ -1,0 +1,2 @@
+D:\GitHubDIR\C_Cpp_VS-IDE_Examples\HelloWorld_ConsoleApp_Cpp\Debug\HelloWorld_ConsoleApp_Cpp.exe
+D:\GitHubDIR\C_Cpp_VS-IDE_Examples\HelloWorld_ConsoleApp\Debug\HelloWorld_ConsoleApp.exe
