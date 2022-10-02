@@ -1,7 +1,3 @@
 # ninja log v5
-0	983	6822128735843055	CMakeFiles/HelloWorld_CMake_basic.dir/HelloWorld_CMake_basic.cpp.obj	79f801e0a7e78f98
-984	3843	6822128760373733	HelloWorld_CMake_basic.exe	4a62ae1990328e42
-0	784	6822131046247871	CMakeFiles/HelloWorld_CMake_basic.dir/HelloWorld_CMake_basic.cpp.obj	79f801e0a7e78f98
-785	2989	6822131064123913	HelloWorld_CMake_basic.exe	4a62ae1990328e42
 1	717	6822133099039426	CMakeFiles/HelloWorld_CMake_basic.dir/HelloWorld_CMake_basic.cpp.obj	79f801e0a7e78f98
 718	2815	6822133116078390	HelloWorld_CMake_basic.exe	4a62ae1990328e42
