@@ -1,3 +1,0 @@
-D:/GitHubDIR/C_Cpp_VS-IDE_Examples/HelloWorld_CMake_basic/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-D:/GitHubDIR/C_Cpp_VS-IDE_Examples/HelloWorld_CMake_basic/out/build/x64-Debug/CMakeFiles/HelloWorld_CMake_basic.dir
-D:/GitHubDIR/C_Cpp_VS-IDE_Examples/HelloWorld_CMake_basic/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
