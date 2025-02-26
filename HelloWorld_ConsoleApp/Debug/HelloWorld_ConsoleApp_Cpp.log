@@ -1,2 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (HelloWorld_ConsoleApp_Cpp.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  HelloWorld_ConsoleApp_Cpp.vcxproj -> D:\GitHubDIR\C_Cpp_VS-IDE_Examples\HelloWorld_ConsoleApp\Debug\HelloWorld_ConsoleApp.exe
