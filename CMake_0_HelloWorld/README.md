@@ -2,20 +2,21 @@ Below it the available **build system (aka generator)**.
 
 <img src="imgs/CMake_MSVC_BuildSystem.png" alt="CMake_MSVC_BuildSystem" style="width:600px;"/>
 
+Steps:
 1. Generate Build Files
-```bash
-cmake -S . -B build -G "Visual Studio 16 2019"
-```
+    ```bash
+    cmake -S . -B build -G "Visual Studio 16 2019"
+    ```
 
-1. Build the Executable
-```bash
-cmake --build build
-```
+2. Build the Executable
+    ```bash
+    cmake --build build
+    ```
 
-1. Run the App  
-```bash
-.build/Debug/HelloWorld_CMake_basic.exe
-```
+3. Run the App  
+    ```bash
+    .build/Debug/HelloWorld_CMake_basic.exe
+    ```
 
 Result:
 

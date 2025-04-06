@@ -1,8 +1,9 @@
 #include <iostream>
 
-#include <hello/hello.hpp>
+#include "hello/hello.hpp"
 
 int main()
 {
     hello::say_hello();
+    return 0;
 }
