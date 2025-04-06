@@ -1,4 +1,4 @@
-/********************************************************************************
+﻿/********************************************************************************
   * @file           : File_Handling.c
   * @brief          : Main program body
   ******************************************************************************
@@ -160,6 +160,11 @@ void display() {
     FILE* fp;
     int j;
     fp = fopen("studentsRec.txt", "r");
+    if (fp == NULL) {
+        perror("Error opening file");
+        // printf("File not found.\n");
+        return; // or exit(1);
+    }
 
     // Displaying/Printing Data from file on Screen
     printf("\nRoll-Nr. - Name -------- Sub-1 - Sub-2 - Sub-3 --- Total --- Percentage");
