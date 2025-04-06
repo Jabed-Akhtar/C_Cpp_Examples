@@ -16,7 +16,7 @@
 int main()
 {
     std::cout << "-------------------------\n";
-    std::cout << "Hello from J_Workshop :)!\n";
+    std::cout << "Hello there :) !\n";
     std::cout << "-------------------------\n";
 }
 
