@@ -6,11 +6,12 @@
 | HelloWorld_ConsoleApp                | IDE: VS       |
 | Add-Two-Numbers_UserInput_ConsoleApp | IDE: VS       |
 | Pointer_basic_ConsoleApp             | IDE: VS       |
-| HelloWorld_CMake_basic               | IDE: VS       |
 | File_Handling                        | IDE: VS       |
-| Projs_Basic                          | CMake Project |
-| Proj_Basic_LibNSubDirs               | CMake Project |
-| Proj_GTest-N-CMake                   | CMake Project |
+| CMake_0_HelloWorld                   | CMake Project |
+| CMake_1_WithHeaders                  | CMake Project |
+| CMake_2_Static_Library               | CMake Project |
+| CMake_3_LibNSubDirs                  | CMake Project |
+| CMake_4_GTest                        | CMake Project |
 | Proj_GTest-N-WordSearchInScripts     | CMake Project |
 | Proj_Intermediate-1                  | CMake Project |
 | Proj_Intermediate-2                  | CMake Project |
