@@ -1,21 +1,21 @@
 # C/C++ Examples
 
 ## Examples
-| Examples                             | Infos         |
-| ------------------------------------ | ------------- |
-| HelloWorld_ConsoleApp                | IDE: VS       |
-| Add-Two-Numbers_UserInput_ConsoleApp | IDE: VS       |
-| Pointer_basic_ConsoleApp             | IDE: VS       |
-| File_Handling                        | IDE: VS       |
-| CMake_0_HelloWorld                   | CMake Project |
-| CMake_1_WithHeaders                  | CMake Project |
-| CMake_2_Static_Library               | CMake Project |
-| CMake_3_LibNSubDirs                  | CMake Project |
-| CMake_4_GTest                        | CMake Project |
-| Proj_GTest-N-WordSearchInScripts     | CMake Project |
-| Proj_Intermediate-1                  | CMake Project |
-| Proj_Intermediate-2                  | CMake Project |
-| Proj_WordSearchInScripts             | CMake Project |
+| Examples                             | Infos                                               |
+| ------------------------------------ | --------------------------------------------------- |
+| HelloWorld_ConsoleApp                | IDE: VS                                             |
+| Add-Two-Numbers_UserInput_ConsoleApp | IDE: VS                                             |
+| Pointer_basic_ConsoleApp             | IDE: VS                                             |
+| File_Handling                        | IDE: VS                                             |
+| CMake_0_HelloWorld                   | CMake Project                                       |
+| CMake_1_WithHeaders                  | CMake Project                                       |
+| CMake_2_Static_Library               | CMake Project                                       |
+| CMake_3_LibNSubDirs                  | CMake Project                                       |
+| CMake_4_GTest                        | CMake Project                                       |
+| CMake_5_GTest-n-WordSearchInScripts  | CMake Project, <span style="color: red;">TBD</span> |
+| Proj_Intermediate-1                  | CMake Project                                       |
+| Proj_Intermediate-2                  | CMake Project                                       |
+| Proj_WordSearchInScripts             | CMake Project                                       |
 
 ## Visual Studio Projects
 IDE used: *Microsoft Visual Studio Community 2019*
