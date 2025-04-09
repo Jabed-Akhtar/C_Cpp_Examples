@@ -8,13 +8,14 @@
 | Pointer_basic_ConsoleApp             | IDE: VS                                             |
 | File_Handling                        | IDE: VS                                             |
 | CMake_0_HelloWorld                   | CMake Project                                       |
-| CMake_1_WithHeaders                  | CMake Project                                       |
-| CMake_2_Static_Library               | CMake Project                                       |
-| CMake_3_LibNSubDirs                  | CMake Project                                       |
-| CMake_4_GTest                        | CMake Project                                       |
-| CMake_5_GTest-n-WordSearchInScripts  | CMake Project, <span style="color: red;">TBD</span> |
-| Proj_Intermediate-1                  | CMake Project                                       |
-| Proj_Intermediate-2                  | CMake Project                                       |
+| CMake_1_CMake-Cmds-1                 | CMake Project                                       |
+| CMake_2_CMake-Cmds-2                 | CMake Project                                       |
+| CMake_3_CMake-Cmds-3                 | CMake Project                                       |
+| CMake_4_WithHeaders                  | CMake Project                                       |
+| CMake_5_Static_Library               | CMake Project                                       |
+| CMake_6_LibNSubDirs                  | CMake Project                                       |
+| CMake_7_GTest                        | CMake Project                                       |
+| CMake_8_GTest-n-WordSearchInScripts  | CMake Project, <span style="color: red;">TBD</span> |
 | Proj_WordSearchInScripts             | CMake Project                                       |
 
 ## Visual Studio Projects
