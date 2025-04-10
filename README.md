@@ -9,8 +9,8 @@
 | File_Handling                        | IDE: VS                                             |
 | CMake_0_HelloWorld                   | CMake Project                                       |
 | CMake_1_CMake-Cmds-1                 | CMake Project                                       |
-| CMake_2_CMake-Cmds-2                 | CMake Project                                       |
-| CMake_3_CMake-Cmds-3                 | CMake Project                                       |
+| CMake_2_CMake-Cmds-2                 | CMake Project, <span style="color: red;">TBD</span> |
+| CMake_3_CMake-Cmds-3                 | CMake Project, <span style="color: red;">TBD</span> |
 | CMake_4_WithHeaders                  | CMake Project                                       |
 | CMake_5_Static_Library               | CMake Project                                       |
 | CMake_6_LibNSubDirs                  | CMake Project                                       |
