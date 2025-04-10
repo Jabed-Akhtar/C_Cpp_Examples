@@ -1,28 +1,68 @@
 # ************************************************
 # @file             : CMakeLists.txt
 # @file-Location    : <project-root-folder>
-# @author           : Jabed-Akhtar
-# @Date             : 15.08.2022
+# @author           : Jabed-Akhtar (github)
+# @date-of-creation : 2022.08.15
 # ************************************************
 
+# Project setup **********************************
+# Set the min. CMake version needed
 cmake_minimum_required(VERSION 3.22)
 
-project(ProjectInter1 VERSION 1.0.0)
+# Define project name, version and languages
+project(CMake_Cmds_Basics
+    VERSION 1.0.0
+    LANGUAGES C CXX)
 
-
-# Scripting basics *******************************
-message(STATUS "----->>> 1. Scripting basic ---> ----------")
+# Messaging **************************************
 message(STATUS "-------------------------------------------")
-set(var1 "var-string")
+message(STATUS ">>>>> Cmake Commands/Scripting Basics <<<<<")
 message(STATUS "Message from CMakeLists.txt from root project folder!")
-message(STATUS "The project name is: ${PROJECT_NAME} ... version ${PROJECT_VERSION}.")
+
+message(STATUS "-------------------------------------------")
+
+# Variables **************************************
+message(STATUS "----->>> Variables ---------------")
+message(STATUS "Project: ${PROJECT_NAME} ... version ${PROJECT_VERSION}.")
+set(var1 "var-string")
 message(STATUS "The var1 value is: ${var1}")
+
 message(STATUS "-------------------------------------------")
 
+# Basic Operations *******************************
+message(STATUS "----->>> Basic operations ---------------")
+# String operations ---------------
+# Concatenate strings
+string(CONCAT my_string "Hello, " "CMake!")
+message(STATUS "Concatenated string: ${my_string}")
 
-# Control-Flow and Auto-deferencing **************
+# Get string length
+string(LENGTH "${my_string}" my_string_length)
+message(STATUS "Length of string: ${my_string_length}")
+
+# List operations ---------------
+# Create and append to a list
+set(my_list "apple" "banana")
+list(APPEND my_list "cherry" "date")
+message(STATUS "My list: ${my_list}")
+
+# Get list length
+list(LENGTH my_list list_length)
+message(STATUS "Length of list: ${list_length}")
+
+# Math operations ---------------
+math(EXPR sum "1 + 2 + 3")
+message(STATUS "Sum = ${sum}")
+
+math(EXPR power "2 * 2 * 2")
+message(STATUS "2 to the power 3 = ${power}")
+
+message(STATUS "-------------------------------------------")
+
+# Control Flows **********************************
+message(STATUS "----->>> Control Flows ---------------")
+# if()/elseif()/els()/endif() ---------------
 message(STATUS "---> 2. Control-Flow and Auto-deferencing ->")
-message(STATUS "-------------------------------------------")
 set(varBool TRUE)
 if(NOT varBool)  # varBool = "${varBool}"
     message(STATUS "If condition was met!")
@@ -31,17 +71,19 @@ else()
 endif()
 
 # Comparing two strings
-message(STATUS "-------------------------------------------")
-set(str1 "This is 1st string.")
-set(str2 "This is 2nd string.")
-if(NOT str1 STREQUAL str2)  # varBool = "${varBool}"
-    message(STATUS "Strings comparison condition met.")
+set(str1 "This is string A.")
+set(str2 "This is string B.")
+set(str3 "This is string C.")
+message(STATUS "Starting string comparisons...")
+if(str1 STREQUAL str2)  # varBool = "${varBool}"
+    message(STATUS "str1 and str2 are EQUAL.")
+elseif(str1 STREQUAL str3)
+message(STATUS "str1 and str3 are EQUAL.")
 else()
-    message(STATUS "Strings comparison condition not met.")
+    message(STATUS "No matches found between str1 and other strings.")
 endif()
 
 # Comparing two arithmentics
-message(STATUS "-------------------------------------------")
 set(num1 1)
 set(num2 1)
 set(str3 "This is 3rd string.")
@@ -53,138 +95,90 @@ else()
     message(STATUS "Numbers comparison condition not met.")
 endif()
 
-# while-Loop
+# Practical example: Feature flag for enabling tests
+#set(ENABLE_TESTS TRUE)  # Change to FALSE to disable tests
+#message(STATUS "Configuring project...")
+#if(NOT ENABLE_TESTS)
+#    message(STATUS "Tests are DISABLED")
+#    # Skip test configuration
+#else()
+#    message(STATUS "Tests are ENABLED")
+#    # Add test targets
+#    enable_testing()
+#    add_subdirectory(tests)
+#endif()
+#message(STATUS "Configuration complete.")
+
+# Practical example: Checking compiler flags
+#set(SUGGESTED_FLAG "-O2")  # The flag we want to check
+#set(FLAG1 "-O1")           # Existing flag 1
+#set(FLAG2 "-O2")           # Existing flag 2
+#message(STATUS "Checking optimization flags...")
+#if(SUGGESTED_FLAG STREQUAL FLAG1)
+#    message(STATUS "Flag already set to -O1 (basic optimization)")
+#elseif(SUGGESTED_FLAG STREQUAL FLAG2)
+#    message(STATUS "Flag already set to -O2 (recommended optimization)")
+#else()
+#    message(STATUS "Applying new optimization flag: ${SUGGESTED_FLAG}")
+#    add_compile_options(${SUGGESTED_FLAG})
+#endif()
+
 message(STATUS "-------------------------------------------")
+
+# while()/endwhile() ---------------
 set(numW 1)
 while(numW LESS 5)
     message(STATUS "Value is ${numW}.")
     math(EXPR numW "${numW} + 1")
 endwhile()
 
-# for-Loop
+# Countdown from 3 to 1
+set(count 3)
+message(STATUS "Countdown starting:")
+while(count GREATER 0)
+    message(STATUS "Count: ${count}")
+    math(EXPR count "${count} - 1")  # Decrement counter
+endwhile()
+message(STATUS "Done!")
+
+# Practical example: Loop through modules and construct file list
+#while(count GREATER 0)
+#    set(SRC "module${count}.cpp")
+#    list(APPEND SOURCES ${SRC})
+#    message(STATUS "Added source: ${SRC}")
+#    math(EXPR count "${count} - 1")
+#endwhile()
+
 message(STATUS "-------------------------------------------")
+
+# foreach()/endforeach() ---------------
+message(STATUS "Starting foreach loop...")
 foreach(item IN ITEMS foo bar baz qux)
     message(STATUS "Item is: ${item}.")
 endforeach()
+message(STATUS "Loop finished!")
 
-message(STATUS "-------------------------------------------")
 foreach(idx RANGE 1 5 1) # parameters: starts-from, ends-at, steps
     message(STATUS "Index is: ${idx}.")
 endforeach()
-message(STATUS "-------------------------------------------")
 
+# Practical example
+#foreach(program IN ITEMS server client tester)
+#    add_executable(${program} ${program}.cpp)
+#    target_link_libraries(${program} PRIVATE common_lib)
+#endforeach()
 
-# ************************************************
-message(STATUS "----->>> 3. Function, Scopes, ... ---> ----")
-message(STATUS "-------------------------------------------")
-set(list1 1 2 3)
-
-set(target1 GLOBAL)
-set_property(
-    "${target1}" #-> GLOBAL > kinda enum angument same as STATUS inside message
-    PROPERTY FOO1
-    "${list1}"
-)
-get_cmake_property(foo_value1 FOO1)
-message(STATUS "Values of FOO1 are: ${foo_value1}")
-
-message(STATUS "-------------------------------------------")
-set(target2 DIRECTORY)
-set_property(
-    "${target2}"
-    PROPERTY FOO2
-    "${list1}"
-)
-get_property(foo_value2 "${target2}" PROPERTY FOO2)
-message(STATUS "Values of FOO2 are: ${foo_value2}")
-
-message(STATUS "-------------------------------------------")
-set(target3 DIRECTORY "${PROJECT_SOURCE_DIR}")
-set_property(
-    ${target3}
-    PROPERTY FOO3
-    "${list1}"
-)
-get_property(foo_value3 ${target2} PROPERTY FOO3)
-message(STATUS "Values of FOO3 are: ${foo_value3}")
-
-# A Function
-message(STATUS "-------------------------------------------")
-function(fun1 arg1)
-    message(STATUS "Message from Function fun1 with argument: ${arg1}.")
-endfunction()
-fun1(1) # calling the function
-fun1(1 2 3) # only arg 1 will be taken in account, all other will be neglected and the function only takes 1 arg
-
-# Function with for-Loop inside
-message(STATUS "-------------------------------------------")
-function(fun2)
-    foreach(arg2 IN LISTS ARGN)
-        message(STATUS "Got argument in fun2: ${arg2}.")
-    endforeach()
-endfunction()
-fun2(1 2 3 4)
-
-message(STATUS "-------------------------------------------")
-function(fun3 first second)
-    foreach(arg3 IN LISTS ARGN) # ARGN is is bould to the argument not present, i.e. 3 4
-        message(STATUS "Got ARGN in fun3: ${arg3}.")
-    endforeach()
-    foreach(arg4 IN LISTS ARGV) # ARGV is bould to all arguments, i.e. 1 2 3 4
-        message(STATUS "Got ARGV in fun3: ${arg4}.")
-    endforeach()
-endfunction()
-fun3(1 2 3 4)
-
-# Global vars
-message(STATUS "-------------------------------------------")
-set(GLOBAL_VAR1 Jab)
-function(fun4)
-    message(STATUS "Value of global var is: ${GLOBAL_VAR1}")
-endfunction()
-fun4()
-
-message(STATUS "-------------------------------------------")
-function(fun4)
-    message(STATUS "Value of global var is: ${GLOBAL_VAR1}")
-    set(GLOBAL_VAR1 12)
-    #set(GLOBAL_VAR1 12 PARENT_SCOPE) #-> this results in setting GLOBAL_VAR1 to 12 but will be only for outside the function
-    message(STATUS "Value of global var is: ${GLOBAL_VAR1}")
-endfunction()
-set(GLOBAL_VAR1 Jab) # this replaces variable declaration which was done inside function
-fun4()
-message(STATUS "Value of global var is: ${GLOBAL_VAR1}")
-
-# function for incrementing number
-message(STATUS "-------------------------------------------")
-function(fun_increment1 var2)
-    message(STATUS "Value before increment is ${${var2}}")
-    math(EXPR newVar2 "${${var2}} + 1")
-    message(STATUS "Value after increment is ${newVar2}")
-endfunction()
-set(value2 14)
-fun_increment1(value2)
-
-message(STATUS "-------------------------------------------")
-function(fun_increment2 var3)
-    math(EXPR newVar3 "${${var3}} + 1")
-    set("${var3}" "${newVar3}" PARENT_SCOPE)
-endfunction()
-set(value3 14)
-fun_increment2(value3) #-> this will increment value once -> +1
-fun_increment2(value3) #-> this will increment value once -> +1+1
-fun_increment2(value3) #-> this will increment value once -> +1+1+1
-message(STATUS "Final value is ${value3}")
-
-# function for adding two numbers
-message(STATUS "-------------------------------------------")
-function(sum1 out a b)
-    math(EXPR ret "${a} + ${b}")
-    set("${out}" "${ret}" PARENT_SCOPE)
-endfunction()
-sum1(value4 2 3)
-message(STATUS "Added value is ${value4}")
-message(STATUS "-------------------------------------------")
-
+# Basic targets ---------------
+message(STATUS "----->>> Basic targets ---------------")
+# Include header files -> Compiler will look for header files
+include_directories(include)
+# Create a static library -> Static library will be compiled into the executable
+add_library(MyLib STATIC)
+target_sources(MyLib PRIVATE src/greet.cpp)
+# Create executable -> Executable namely MyApp will be generated
+add_executable(MyApp)
+target_sources(MyApp PRIVATE src/main.cpp)
+# Link library with executable
+target_link_libraries(MyApp PRIVATE MyLib)
 
 # **************** END OF FILE *******************
