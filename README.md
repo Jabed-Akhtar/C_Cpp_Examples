@@ -45,7 +45,7 @@ Tools used:
     - `-DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++`: force specific compiler
 - Build project:
   - Build project: `cmake --build build` or `cd build && make`
-  - Make + Install: `cmake --build build`
+  - Make + Install: `cmake --build build --target install`
   - Clean before build: `cmake --build build --clean-first`
 - Run executable: `/build/<app-name>.exe`
 - Clean/Remove build directory: `rm -rf build/`
